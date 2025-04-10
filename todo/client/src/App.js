@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 //Components
 import Homepage from './pages/Homepage';
@@ -34,10 +34,10 @@ function App() {
           <LatestNews/>
           <ToastContainer newestOnTop autoClose={2000} />
 
-          <Switch>
+          <Routes>
             <Route exact path="/" component={Homepage} />
             <Route component={Routes} />
-          </Switch>
+          </Routes>
         </>
       </Router>
     </Provider>
